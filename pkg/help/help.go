@@ -55,6 +55,7 @@ Specify value to convert:
     ...
 `
 
+// Print default flags values and help text
 func ShowHelp() {
 	flag.PrintDefaults()
 	fmt.Println(helpText)

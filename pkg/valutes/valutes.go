@@ -15,8 +15,10 @@ import (
 // ?date_req=23/08/2017
 const valuteUrl = "http://www.cbr.ru/scripts/XML_daily.asp"
 
+// Roubles currency CharCode
 const RUB = "RUB"
 
+// Represent currency info
 type Valute struct {
 	NumCode  int32
 	CharCode string
@@ -25,6 +27,7 @@ type Valute struct {
 	Value    string
 }
 
+// A parsed list of currencies of CBR
 type ValCurs struct {
 	XMLName xml.Name `xml:"ValCurs"`
 	Date    string   `xml:"Date,attr"`
@@ -49,6 +52,7 @@ func (v *Valute) GetValue() float32 {
 	return float32(val)
 }
 
+// Return initial value of initial currency in roubles currency
 func (vc *ValCurs) GetValueInRoubles(value float32, currency string) float32 {
 	if currency == RUB {
 		return value
@@ -65,6 +69,7 @@ func (vc *ValCurs) GetValueInRoubles(value float32, currency string) float32 {
 	return float32(0)
 }
 
+// Connect to CBR, get and parse XML of currencies
 func GetValuteCurrencies(date *time.Time) *ValCurs {
 	url := valuteUrl
 	if date != nil {
