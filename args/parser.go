@@ -3,7 +3,7 @@ package args
 import (
 	"flag"
 	"fmt"
-	"gdg_bootcamp_task/args/help"
+	"github.com/freenoth/gdg_bootcamp_task/args/help"
 	"os"
 	"strconv"
 	"time"

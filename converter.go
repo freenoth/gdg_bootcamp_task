@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gdg_bootcamp_task/args"
-	"gdg_bootcamp_task/valutes"
+	"github.com/freenoth/gdg_bootcamp_task/args"
+	"github.com/freenoth/gdg_bootcamp_task/valutes"
 )
 
 func main() {
