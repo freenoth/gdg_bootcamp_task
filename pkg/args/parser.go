@@ -10,7 +10,7 @@ import (
 	"github.com/freenoth/gdg_bootcamp_task/pkg/help"
 )
 
-// Parse flags and return its values of stop work if error occurred
+// ParseFlags - Parse flags and return its values of stop work if error occurred
 func ParseFlags() (currency string, value float32, date *time.Time) {
 	helpFlag := flag.Bool("help", false, "Show help")
 	dateFlag := flag.String("d", "", "Specify a date for get currencies. Example: '31/08/2017'. (default now)")

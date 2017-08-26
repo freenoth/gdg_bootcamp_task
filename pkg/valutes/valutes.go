@@ -15,10 +15,10 @@ import (
 // ?date_req=23/08/2017
 const valuteUrl = "http://www.cbr.ru/scripts/XML_daily.asp"
 
-// Roubles currency CharCode
+// RUB - Roubles currency CharCode
 const RUB = "RUB"
 
-// Represent currency info
+// ValCurs - Represent currency info
 type Valute struct {
 	NumCode  int32
 	CharCode string
@@ -27,7 +27,7 @@ type Valute struct {
 	Value    string
 }
 
-// A parsed list of currencies of CBR
+// ValCurs - A parsed list of currencies of CBR
 type ValCurs struct {
 	XMLName xml.Name `xml:"ValCurs"`
 	Date    string   `xml:"Date,attr"`
@@ -35,24 +35,24 @@ type ValCurs struct {
 	Valute  []Valute
 }
 
-// Return value of current valute converted to roubles
+// ToRub - Return value of current valute converted to roubles
 func (v *Valute) ToRub(value float32) float32 {
 	return value / float32(v.Nominal) * v.GetValue()
 }
 
-// Return value of current valute converted from roubles
+// FromRub - Return value of current valute converted from roubles
 func (v *Valute) FromRub(value float32) float32 {
 	return value / v.GetValue() * float32(v.Nominal)
 }
 
-// Parse xml value with comma to initial float
+// GetValue - Parse xml value with comma to initial float
 func (v *Valute) GetValue() float32 {
 	dottedValue := strings.Replace(v.Value, ",", ".", -1)
 	val, _ := strconv.ParseFloat(dottedValue, 32)
 	return float32(val)
 }
 
-// Return initial value of initial currency in roubles currency
+// GetValueInRoubles - Return initial value of initial currency in roubles currency
 func (vc *ValCurs) GetValueInRoubles(value float32, currency string) float32 {
 	if currency == RUB {
 		return value
@@ -69,7 +69,7 @@ func (vc *ValCurs) GetValueInRoubles(value float32, currency string) float32 {
 	return float32(0)
 }
 
-// Connect to CBR, get and parse XML of currencies
+// GetValuteCurrencies - Connect to CBR, get and parse XML of currencies
 func GetValuteCurrencies(date *time.Time) *ValCurs {
 	url := valuteUrl
 	if date != nil {
