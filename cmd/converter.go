@@ -1,10 +1,10 @@
-package main
+package cmd
 
 import (
 	"fmt"
 
-	"github.com/freenoth/gdg_bootcamp_task/args"
-	"github.com/freenoth/gdg_bootcamp_task/valutes"
+	"github.com/freenoth/gdg_bootcamp_task/pkg/args"
+	"github.com/freenoth/gdg_bootcamp_task/pkg/valutes"
 )
 
 func main() {
