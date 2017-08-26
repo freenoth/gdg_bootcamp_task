@@ -10,7 +10,7 @@ func main() {
 	curr, val, date := args.ParseFlags()
 
 	fmt.Println("Welcome to Currency converter!\nprint --help for more information")
-    fmt.Println("")
+	fmt.Println("")
 	vals := valutes.GetValuteCurrencies(date)
 
 	valueInRoubles := vals.GetValueInRoubles(val, curr)
