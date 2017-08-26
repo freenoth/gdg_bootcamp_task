@@ -3,10 +3,11 @@ package args
 import (
 	"flag"
 	"fmt"
-	"github.com/freenoth/gdg_bootcamp_task/args/help"
 	"os"
 	"strconv"
 	"time"
+
+	"github.com/freenoth/gdg_bootcamp_task/args/help"
 )
 
 func ParseFlags() (currency string, value float32, date *time.Time) {

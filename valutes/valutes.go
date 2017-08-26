@@ -3,12 +3,13 @@ package valutes
 import (
 	"encoding/xml"
 	"fmt"
-	"golang.org/x/net/html/charset"
 	"net/http"
 	"os"
 	"strconv"
 	"strings"
 	"time"
+
+	"golang.org/x/net/html/charset"
 )
 
 // ?date_req=23/08/2017
