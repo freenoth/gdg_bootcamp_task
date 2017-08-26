@@ -1,8 +1,8 @@
 package help
 
 import (
-    "fmt"
-    "flag"
+	"flag"
+	"fmt"
 )
 
 const helpText = `
@@ -56,6 +56,6 @@ Specify value to convert:
 `
 
 func ShowHelp() {
-    flag.PrintDefaults()
-    fmt.Println(helpText)
+	flag.PrintDefaults()
+	fmt.Println(helpText)
 }
