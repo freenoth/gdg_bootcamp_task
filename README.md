@@ -9,6 +9,10 @@ info: https://www.meetup.com/GDG-Perm/events/242030053/
 
 `go get "golang.org/x/net/html/charset"`
 
+## Installing
+
+`go get github.com/freenoth/gdg_bootcamp_task`
+
 ## Help info
 
 ```
