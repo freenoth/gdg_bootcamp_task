@@ -1,8 +1,8 @@
 # Currency converter
 
-Go CLI application for currencies converting.
-
 [![Go Report Card](https://goreportcard.com/badge/github.com/freenoth/gdg_bootcamp_task)](https://goreportcard.com/report/github.com/freenoth/gdg_bootcamp_task)
+
+Go CLI application for currencies converting.
 
 A task for Golang Bootcamp Perm, August 26, 2017
 info: https://www.meetup.com/GDG-Perm/events/242030053/
