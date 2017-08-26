@@ -18,7 +18,7 @@ const valuteUrl = "http://www.cbr.ru/scripts/XML_daily.asp"
 // RUB - Roubles currency CharCode
 const RUB = "RUB"
 
-// ValCurs - Represent currency info
+// Valute - Represent currency info
 type Valute struct {
 	NumCode  int32
 	CharCode string
