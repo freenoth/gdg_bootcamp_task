@@ -43,8 +43,8 @@ func (v *Valute) FromRub(value float32) float32 {
 
 // Parse xml value with comma to initial float
 func (v *Valute) GetValue() float32 {
-	dotted_value := strings.Replace(v.Value, ",", ".", -1)
-	val, _ := strconv.ParseFloat(dotted_value, 32)
+	dottedValue := strings.Replace(v.Value, ",", ".", -1)
+	val, _ := strconv.ParseFloat(dottedValue, 32)
 	return float32(val)
 }
 
